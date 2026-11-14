@@ -1,5 +1,5 @@
 import { useState, useEffect, useMemo, useCallback } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import useAuth from '../../context/useAuth';
 import { projectsApi } from '../../api/client';
 import ProjectStatusBadge from '../../components/projects/ProjectStatusBadge';
@@ -7,21 +7,14 @@ import CreateProjectModal from '../../components/projects/CreateProjectModal';
 import { 
   FolderGit2, 
   Search, 
-  Filter, 
   Plus, 
   LayoutGrid, 
   Table as TableIcon, 
-  Calendar, 
-  IndianRupee, 
   Users, 
   ArrowRight, 
   Loader2, 
   AlertCircle, 
-  BarChart2, 
-  CheckCircle2, 
-  Clock, 
-  FolderSearch,
-  Sparkles
+  FolderSearch
 } from 'lucide-react';
 
 export default function ProjectsList() {

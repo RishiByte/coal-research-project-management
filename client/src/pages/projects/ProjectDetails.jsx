@@ -7,11 +7,9 @@ import ProjectDocuments from '../../components/projects/ProjectDocuments';
 import ResearcherAssignModal from '../../components/projects/ResearcherAssignModal';
 import EditProjectModal from '../../components/projects/EditProjectModal';
 import { 
-  FolderKanban, 
   ArrowLeft, 
   Calendar, 
   IndianRupee, 
-  Tag, 
   Users, 
   FileText, 
   BarChart3, 
@@ -21,10 +19,7 @@ import {
   Edit3, 
   UserPlus, 
   Mail, 
-  Shield, 
   TrendingUp, 
-  CheckCircle2, 
-  Clock, 
   Coins, 
   FileCheck2,
   PieChart
@@ -135,7 +130,6 @@ export default function ProjectDetails() {
   const totalSpent = (project.fundReports || []).reduce((sum, f) => sum + (f.amountSpent || 0), 0);
   const totalReceived = (project.fundReports || []).reduce((sum, f) => sum + (f.amountReceived || 0), 0);
   const spendPercentage = totalBudget > 0 ? Math.min(Math.round((totalSpent / totalBudget) * 100), 100) : 0;
-  const receivedPercentage = totalBudget > 0 ? Math.min(Math.round((totalReceived / totalBudget) * 100), 100) : 0;
 
   // Latest Progress Report
   const reportsList = [...(project.reports || [])].sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));

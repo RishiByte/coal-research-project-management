@@ -6,18 +6,14 @@ import ProjectStatusBadge from '../../components/projects/ProjectStatusBadge';
 import { 
   Microscope, 
   FolderGit2, 
-  FileText, 
   TrendingUp, 
   Calendar, 
   ArrowRight, 
   Clock, 
   AlertCircle, 
   Loader2, 
-  CheckCircle2, 
   FileClock,
-  ExternalLink,
-  Layers,
-  Sparkles
+  Layers
 } from 'lucide-react';
 
 export default function ResearcherDashboard() {
