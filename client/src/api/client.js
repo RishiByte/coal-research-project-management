@@ -99,4 +99,14 @@ export const projectsApi = {
   removeResearcher: (id, userId) => api.delete(`/api/projects/${id}/researchers/${userId}`),
 };
 
+/**
+ * Documents API endpoints
+ */
+export const documentsApi = {
+  listByProject: (projectId) => api.get(`/api/projects/${projectId}/documents`),
+  create: (projectId, data) => api.post(`/api/projects/${projectId}/documents`, data),
+  getById: (id) => api.get(`/api/documents/${id}`),
+  delete: (id) => api.delete(`/api/documents/${id}`),
+};
+
 export default api;
